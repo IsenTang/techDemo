@@ -1,0 +1,44 @@
+/* 初始化  */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+
+    width: 1000px;
+    height:600px;
+    background-color: azure;
+    margin: 0 auto;
+    margin-top: 100px;
+    display : flex;
+    justify-content : center;
+    align-items :flex-end;
+    flex-direction : row;
+}
+
+.pillar{
+    width: 50px;
+    background-color: aqua;
+    margin-left: 50px;
+    text-align: center;
+}
+
+.run-button{
+    width: 50px;
+    background-color: aqua;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.on{
+    background-color: greenyellow;
+}
+

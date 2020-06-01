@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery.js"></script>
+
+<script>
+    $('#checkcash').click(function () {
+        if ($('#checkcash').val() == '0') {
+
+            console.log(123);
+            $("#checkcash option[value='0']").remove();
+        }
+    });
+
+    $("#alert").click(function(){
+        alert("1123");
+    })
+</script>
+</head>
+
+<body>
+ 是否已提现 
+    <select id="checkcash"   style="width: 181px">
+        <option selected="selected" value="0"></option>
+        <option value="1">是</option>
+        <option value="2">否</option>
+    </select>
+    &nbsp;
+    <input type='button' id='alert' value="test">
+</body>
+
+
+
+
+</html>
