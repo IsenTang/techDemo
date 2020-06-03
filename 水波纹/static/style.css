@@ -1,0 +1,105 @@
+/* *{
+    padding: 0;
+    margin: 0;
+} */
+
+/* 注意！calc的+、-号前后必须有空格，不然会出错 */
+/*整体的背景*/
+.water-wave {
+    /*占满整个屏幕*/
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../img/1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/*存放波纹的一个自适应的正方形*/
+.wave-container {
+    position: absolute;
+    /* vmin =  视口width > 视口height ?  height : width*/
+    width: 80vmin;
+    height: 80vmin;
+}
+
+.center{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*背景铺满*/
+    background-size: cover;
+}
+
+.wave {
+    /*每个波纹居中*/
+    position: absolute;
+    top: calc((100% - 10vmin) / 2);
+    left: calc((100% - 10vmin) / 2);
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 50%;
+    /*开启3d加速*/
+    transform: translate3d(0, 0, 0);
+    /* border:1px solid black; */
+    background-image: url("../img/1.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    /* background-repeat: no-repeat; */
+    /*所有属性变化过渡200ms*/
+    transition: all .2s;
+}
+
+/*每个波纹的动画延迟不一样， size由大变小再
+变为100%这样效果更逼真*/
+.wave1 {
+    /*forwards停留在动画的最后一帧*/
+    animation: move 1s ease-out .1s forwards;
+    background-size: 106%;
+    z-index: 10;
+}
+
+.wave2 {
+    animation: move 1s ease-out .15s forwards;
+    background-size: 102%;
+    z-index: 20;
+
+}
+
+.wave3 {
+    animation: move 1s ease-out .25s forwards;
+    background-size: 104%;
+    z-index: 30;
+}
+
+.wave4 {
+    animation: move 1s ease-out .4s forwards;
+    background-size: 100%;
+    z-index: 40;
+}
+
+@keyframes move {
+    0% {
+        top: calc((100% - 10vmin) / 2);
+        left: calc((100% - 10vmin) / 2);
+        width: 10vmin;
+        height: 10vmin;
+        opacity: 1;
+    }
+    /*动画过程中不能让opacity渐变，不然没有水波纹的效果*/
+    /*但是这样又会产生一点小抖动， 不过不影响效果*/
+    /*你也可以注释掉看看*/
+    99% {
+        opacity: 1;
+    }
+    100% {
+        top: calc((100% - 40vmin) / 2);
+        left: calc((100% - 40vmin) / 2);
+        width: 40vmin;
+        height: 40vmin;
+        opacity: 0;
+    }
+}
