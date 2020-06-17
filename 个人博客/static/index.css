@@ -1,0 +1,276 @@
+/* 初始化 */
+*{
+    padding:0;
+    margin: 0;
+}
+
+body{
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* header */
+.header{
+    background: url(./images/bg-banner02.jpg) no-repeat fixed;
+    background-size: cover;
+    min-height: 650px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-bg-color{
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 650px;
+}
+
+/* flex布局，左右 */
+.header-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: transparent;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    transition: 0.5s all;
+    z-index: 20;
+}
+
+/* header collapse */
+.header-top-collapse{
+    height: 80px;
+    background-color: rgba(64, 75, 97, 0.9);
+}
+
+/* header left */
+.header-left{
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: none;
+  margin-left: 45px;
+}
+
+.header-left-logo{
+    color: #be9e21;
+}
+
+.header-left:hover{
+    text-decoration: none;
+    color:white
+}
+
+/* header right */
+.header-top-right{
+    display: flex;
+    flex-direction: row;
+    margin-right: 45px;
+}
+
+.header-top-right-child{
+    margin-left:23px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.header-top-right-child:hover{
+    color: #be9e21;
+    text-decoration: none;
+}
+
+.header-active{
+    color: #be9e21;
+}
+
+
+/* section 公用 */
+.section-title{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    color:rgb(103, 105, 108);
+    margin-top: 25px;
+}
+
+.section-subtitle{
+    margin-top: 32px;
+    font-size: 20px;
+    color:rgb(103, 105, 108);
+    font-weight: 300;
+}
+
+.bottom-line{
+    margin: 20px auto 40px auto;
+    border: 0;
+    border-top: 0px;
+    height: 3px;
+    width: 40px;
+    background-color: #BE9E21;
+}
+
+
+/* about */
+.about{
+    background-color: #F3F4F8;
+    color: #67696c;
+    padding: 60px 0;
+    height: 100%;
+}
+
+.about-item-h{
+    font-weight: 700px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.about-item-upper{
+    opacity: 0.7;
+    font-size: 75px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+    font-weight: 900;
+    padding-right: 6px;
+}
+
+.about-item-p{
+    opacity: 0.6;
+    text-align: left;
+    padding:10px 0;
+    font-size: 16px;
+}
+
+.about-item-a{
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    color:#be9e21;
+    font-size: 16px;
+}
+
+.about-item-a:hover{
+
+    color: #be9e21;
+}
+
+/* services */
+.services{
+    background-color: white;
+    padding: 60px 0;
+}
+
+.services-img{
+    cursor: pointer;
+    margin-top:10px;
+    transition: 1s all;
+    position: relative;
+    z-index: 10;
+}
+
+/* 点击动画 */
+.services-img:hover{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+
+/* profile */
+.profile{
+    background-color: #67696c;
+    min-height: 390px;
+}
+
+
+/* blog */
+.blog{
+    background-color: #F3F4F8;
+    color: #67696c;
+    padding: 60px 0;
+    height: 100%;
+}
+
+.blog-title{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.blog-subtitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12px;
+    min-height: 30px;
+}
+
+.blog-img{
+    color: #949494;
+}
+
+.blog-content{
+    text-align: left;
+    margin-top:10px;
+}
+
+.blog-read-more{
+    text-align: left;
+    margin-top: 10px;
+}
+
+.blog-read-more a{
+    color:#949494;
+}
+
+.blog-read-more a:hover{
+    color:#23527c
+}
+
+.blog-img{
+    transition: 0.5s all linear;
+    cursor: pointer;
+}
+
+.blog-img-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-img:hover{
+    transform: scale(1.05);
+}
+
+/* contact */
+.contact{
+    background-color: rgb(73, 84, 105);
+    height: 100%;
+    padding:60px 0 ;
+}
+
+.contact-color{
+    color: #fff;
+}
+
+.contact-background-color{
+    background-color: #fff;
+}
+
+.contact-location-detail{
+    margin-top: 25px;;
+}
+
+
+
+
+
+
+
